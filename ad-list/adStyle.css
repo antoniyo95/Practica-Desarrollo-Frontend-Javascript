@@ -1,0 +1,18 @@
+.ad {
+  border: solid 1px lightgray;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.ad .user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ad img {
+  width: 50px;
+  height: 50px;
+}
+
