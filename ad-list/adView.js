@@ -22,3 +22,7 @@ export function buildSpinnerView() {
 export function buildErrorLoadingAds() {
   return `<p class="load-error">There has been a problem loading the ads. Please try again later.</p>`
 }
+
+export function buildEmptyAdList() {
+  return `<p>There are no results available.</p>`
+}
