@@ -1,13 +1,13 @@
 import { getAds } from "./ads.js";
-import { buildAdView, buildSpinnerView, buildErrorLoadingAds, buildEmptyAdList } from "./adView.js";
+import { buildAdView, buildSpinnerView, buildEmptyAdList } from "./adView.js";
 
-export async function adListController(adListElement, showMessage) {
+export async function adListController(adListElement) {
   adListElement.innerHTML = buildSpinnerView();
   let ads = [];
   
   try {
     ads = await getAds();
-    showMessage('The ads were loaded successfully.');
+    dispatchCustomEvent('The ads were loaded successfully.', adListElement);
 
     adListElement.innerHTML = '';
     
@@ -18,9 +18,8 @@ export async function adListController(adListElement, showMessage) {
     }
   
   } catch (error) {
-    
-    //adListElement.innerHTML = buildErrorLoadingAds();
-    showMessage('The ads could not be loaded.');
+    dispatchCustomEvent('The ads could not be loaded.', adListElement);
+    adListElement.innerHTML = '';
   }
   
 }
@@ -36,5 +35,12 @@ function showEmptyMessage(adListElement) {
   adListElement.innerHTML = buildEmptyAdList();
 }
 
+function dispatchCustomEvent (message, adListElement) {
+  const event = new CustomEvent('newNotification', {
+    detail: {
+      message: message
+    }
+  })
 
-
+  adListElement.dispatchEvent(event);
+}
