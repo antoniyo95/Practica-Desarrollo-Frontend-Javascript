@@ -1,3 +1,4 @@
+import { pubSub } from "../pubsub.js";
 import { createUser } from "./signup.js";
 
 export function signupController (signupElement) {
@@ -13,10 +14,10 @@ export function signupController (signupElement) {
       try {
         await createUser(emailElement.value, passwordElement.value)
         signupElement.reset();
-        alert("User created")
+        pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'User created')
         window.location = '/'
       } catch (error) {
-        alert(error.message)
+        pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, error.message)
       }
     }
   })
@@ -25,7 +26,7 @@ export function signupController (signupElement) {
     const mailRegExp = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
 
     if (!mailRegExp.test(email)) {
-      alert('The email does not have a valid format.');
+      pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'The email does not have a valid format.')
       return false
     }
 
@@ -34,7 +35,7 @@ export function signupController (signupElement) {
 
   function isPasswordValid(password, passwordConfirmation) {
     if (password !== passwordConfirmation) {
-      alert('The password does not match.');
+      pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'The password does not match.')
       return false;
     }
 
