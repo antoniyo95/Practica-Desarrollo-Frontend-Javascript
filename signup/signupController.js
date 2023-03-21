@@ -36,7 +36,7 @@ export function signupController (signupElement) {
   function isPasswordValid(password, passwordConfirmation) {
     if (password !== passwordConfirmation) {
       pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'The password does not match.')
-      return false;
+      return false
     }
 
     return true

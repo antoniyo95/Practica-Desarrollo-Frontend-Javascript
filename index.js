@@ -1,5 +1,5 @@
+import { notificationController } from "./notifications/notificationController.js";
 import { adListController } from "./ad-list/adListController.js";
-import { notificationController } from "./notifications/notificationsController.js";
 
 const adListElement = document.querySelector('.ads-list');
 const notificationsElement = document.querySelector('.notifications')

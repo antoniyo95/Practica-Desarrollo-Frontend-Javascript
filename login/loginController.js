@@ -1,15 +1,16 @@
+import { pubSub } from "../pubsub.js";
 import { isEmailValid } from "../utils/isEmailValid.js";
 import { loginUser } from "./login.js";
 
-export function loginController() {
+export function loginController(loginElement) {
 
   loginElement.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const emailElement = loginElement.querySelector('#username')
+    const emailElement = loginElement.querySelector('#username');
 
     if (!isEmailValid(emailElement.value)) {
-      alert('Invalid Email')
+      pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'Invalid Email')
     } else {
       logUser(loginElement)
     }
@@ -25,7 +26,7 @@ export function loginController() {
       localStorage.setItem('token', jwt)
       window.location = '/';
     } catch (error) {
-      alert(error.message)
+      pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, error.message)
     }
   }
 }
