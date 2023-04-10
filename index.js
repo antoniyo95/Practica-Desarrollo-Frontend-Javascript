@@ -6,11 +6,6 @@ const adListElement = document.querySelector('.ads-list');
 const notificationsElement = document.querySelector('.notifications')
 const userActionsElement = document.querySelector('.user-actions')
 
-const showMessage = notificationController(notificationsElement);
+notificationController(notificationsElement);
 adListController(adListElement)
 userActionsController(userActionsElement)
-
-adListElement.addEventListener('newNotification', (event) => {
-  console.log('I have received the event.', event.detail.message)
-  showMessage(event.detail.message)
-})

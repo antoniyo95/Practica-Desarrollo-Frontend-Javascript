@@ -11,7 +11,7 @@ export function userActionsController (userActionsElement) {
     signupLinkElement.remove()
 
     const payload = decodeToken(token)
-    userActionsElement.innerHTML = buildGreeting(payload.username)
+    userActionsElement.appendChild(buildGreeting(payload.username))
   } else {
     const createAdLinkElement = userActionsElement.querySelector('#createAdLink')
     createAdLinkElement.remove()

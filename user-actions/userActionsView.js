@@ -1,3 +1,5 @@
 export function buildGreeting(name) {
-  return `<p>¡Hola ${name}!</p>`
+  const paragraph = document.createElement('p')
+  paragraph.textContent = `Hello ${name}!`
+  return paragraph
 }
