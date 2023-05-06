@@ -3,9 +3,9 @@ export const buildAdDetail = (ad) => {
   return `
   <div class="user-info">
       <span>${ad.handle}</span>
-      <img src="${ad.avatar}" />
+      <img src="${ad.avatar}" class="avatar" />
     </div>
     <p>${ad.content} - ${adDate.toISOString()}</p>
-    <span>${ad.retweets}</span><span>${ad.likes}</span><span>${ad.replies}</span>
+    <span>${ad.retweets} Retweets </span><span>${ad.likes} Likes </span><span>${ad.replies} Replies </span>
   `
 }
