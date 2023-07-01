@@ -6,10 +6,8 @@ export function buildAdView(ad) {
   newAdElement.innerHTML = `
     <a href="/ad-detail.html?adID=${ad.id}">
     <div class="user-info">
-      <span>${ad.handle}</span>
-      <img src="${ad.avatar}" />
     </div>
-    <p>${ad.content} - ${adDate.toISOString()}</p>
+    <p>${ad.content}</p>
     </a>
   `;
 

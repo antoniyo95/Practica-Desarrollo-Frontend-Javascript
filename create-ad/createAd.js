@@ -6,7 +6,7 @@ export const createAd = async (adContent) => {
 
   const token = localStorage.getItem('token')
 
-  await fetch('http://localhost:8000/api/ads', {
+  const response = await fetch('http://localhost:8000/api/ads', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
