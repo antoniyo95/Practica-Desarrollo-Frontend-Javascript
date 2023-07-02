@@ -4,13 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./create-ad/createAdStyle.css">
   <title>Create Ad</title>
 </head>
 <body>
   <h1>Ad Creation</h1>
 
   <form id="createAdForm">
-    <textarea name="adContent" id="adContent" cols="30" rows="10" required></textarea>
+    <input type="file" name="photo" accept="image/*" required>
+    <input type="text" name="name" placeholder="Product Name" required>
+    <textarea name="description" placeholder="Product Description" required></textarea>
+    <input type="number" name="price" placeholder="Product Price" required>
+    <select name="compraVenta" required>
+      <option value="purchase">Purchase</option>
+      <option value="sale">Sale</option>
+    </select>
 
     <button type="submit">Create Ad</button>
   </form>

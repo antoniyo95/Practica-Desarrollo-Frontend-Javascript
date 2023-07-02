@@ -1,7 +1,7 @@
 import { pubSub } from "../pubsub.js"
 import { deleteAd, getAdById } from "./adDetail.js"
 import { buildAdDetail } from "./adDetailView.js"
-import { decodeToken} from "../utils/decodeToken.js"
+import { decodeToken } from "../utils/decodeToken.js"
 
 export const adDetailController = async (adDetailElement, adId) => {
 

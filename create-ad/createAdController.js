@@ -1,17 +1,16 @@
-import { createAd } from "./createAd.js";
+import { createAd } from './createAd.js';
 
 export const createAdController = async (createAdFormElement) => {
-  createAdFormElement.addEventListener('submit', async (event) =>{
+  createAdFormElement.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const formData = new FormData(createAdFormElement);
-    const adContent = formData.get('adContent');
 
     try {
-      await createAd(adContent)
-      window.location = '/'
+      await createAd(formData);
+      window.location = '/';
     } catch (error) {
-      alert(error)
+      alert(error);
     }
-  })
-}
+  });
+};

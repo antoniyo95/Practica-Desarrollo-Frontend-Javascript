@@ -1,10 +1,10 @@
-import { createAdController } from "./createAdController.js"
+import { createAdController } from './createAdController.js';
 
-const token = localStorage.getItem('token')
+const token = localStorage.getItem('token');
 
 if (!token) {
-  window.location = '/'
+  window.location = '/';
 } else {
-  const createAdFormElement = document.querySelector('#createAdForm')
-  createAdController(createAdFormElement)
+  const createAdFormElement = document.querySelector('#createAdForm');
+  createAdController(createAdFormElement);
 }

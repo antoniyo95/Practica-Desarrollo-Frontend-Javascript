@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+section.notifications {
+  margin-bottom: 20px;
+}
+
+form#logUser {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form#logUser label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form#logUser input[type="email"],
+form#logUser input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+}
+
+form#logUser button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form#logUser a {
+  display: block;
+  text-align: center;
+  color: #666666;
+  text-decoration: none;
+}
