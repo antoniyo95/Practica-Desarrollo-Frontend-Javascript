@@ -5,130 +5,54 @@ body {
   padding: 0;
 }
 
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
 h1 {
   text-align: center;
   color: #333333;
-  margin: 20px 0;
 }
 
-.user-actions {
-  text-align: right;
-  margin-bottom: 20px;
+form {
+  margin-top: 20px;
 }
 
-.user-actions a,
-.user-actions button {
-  margin-left: 10px;
-}
-
-.user-actions a {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #4CAF50;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.user-actions a:hover {
-  background-color: #45a049;
-}
-
-.user-actions button {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #f44336;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.user-actions button:hover {
-  background-color: #d32f2f;
-}
-
-.notifications {
-  margin-bottom: 20px;
-}
-
-.ads-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-  padding: 20px;
-}
-
-.ad {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-.ad a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.ad .image-container {
-  text-align: center;
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  padding: 10px;
   margin-bottom: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.ad .image-container img {
-  max-width: 100%;
-  max-height: 200px;
+input[type="file"] {
+  padding: 5px;
 }
 
-.ad .ad-info h2 {
-  font-size: 18px;
-  margin-bottom: 5px;
+textarea {
+  resize: vertical;
 }
 
-.ad .ad-info p {
-  font-size: 14px;
-  margin-bottom: 5px;
+button[type="submit"] {
+  background-color: #ff9800;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.ad .ad-info p:last-child {
-  margin-bottom: 0;
-}
-
-.ad .ad-info p.price {
-  font-weight: bold;
-  color: #ff9800;
-}
-
-.ad .ad-info p.compraVenta {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #666666;
-}
-
-.spinner {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.load-error {
-  color: red;
+button[type="submit"]:hover {
+  background-color: #e64a19;
 }
