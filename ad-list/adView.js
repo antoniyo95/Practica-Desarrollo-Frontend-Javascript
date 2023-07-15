@@ -11,8 +11,8 @@ export function buildAdView(ad) {
       <div class="ad-info">
         <h2>${ad.nombre}</h2>
         <p>Description: ${ad.descripcion}</p>
-        <p>Price: ${ad.precio}</p>
-        <p>${ad.compraVenta === 'compra' ? 'Purchase' : 'Sale'}</p>
+        <p>Price: ${ad.precio}€</p>
+        <p>${ad.compraVenta === 'purchase' ? 'Purchase' : 'Sale'}</p>
       </div>
     </a>
   `;
