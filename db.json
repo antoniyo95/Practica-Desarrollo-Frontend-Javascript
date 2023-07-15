@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "username": "user@example.com",
+      "password": "$2b$10$967ngUUaYL9YtmJe3Eq22OQKWXznz33Hsg2pfI99tPl1D1TD/qYXy",
+      "id": 1
+    },
+    {
+      "username": "admin@example.com",
+      "password": "$2b$10$967ngUUaYL9YtmJe3Eq22OQKWXznz33Hsg2pfI99tPl1D1TD/qYXy",
+      "id": 2
+    }
+  ],
+  "ads": [
+    {
+      "foto": {},
+      "nombre": "Iphone 12 mini 128gb",
+      "descripcion": "Vendo porque me han regalado uno nuevo. Tiene alguna marca estetica pero por lo demas esta perfecto. 81% de bateria Viene con caja original.",
+      "precio": "350",
+      "compraVenta": "sale",
+      "userId": 1,
+      "updatedAt": "2023-07-15T10:29:19.503Z",
+      "id": 1
+    },
+    {
+      "foto": {},
+      "nombre": "Mueble recibidor",
+      "descripcion": "Compro mueble dos cajones con las siguientes medidas:\n\nMedidas del producto:\n\nAncho: 95 cm\n\nFondo: 25 cm\n\nAlto: 90 cm",
+      "precio": "50",
+      "compraVenta": "purchase",
+      "userId": 1,
+      "updatedAt": "2023-07-15T10:33:07.078Z",
+      "id": 2
+    },
+    {
+      "foto": {},
+      "nombre": "Aire acondicionado Fujitsu",
+      "descripcion": "AACC Fujitsu Model AOYG12LLCC. Tiene 5 años, con poco uso, como nuevo. Codos y tuercas incluidos. Hay que desinstalarlo. Disponible a partir del dia 25 de Agosto.",
+      "precio": "250",
+      "compraVenta": "sale",
+      "userId": 2,
+      "updatedAt": "2023-07-15T10:56:31.100Z",
+      "id": 3
+    },
+    {
+      "foto": {},
+      "nombre": "Se busca Playstation 5",
+      "descripcion": "Busco Playstation 5 a buen precio. Se puede negociar",
+      "precio": "500",
+      "compraVenta": "purchase",
+      "userId": 2,
+      "updatedAt": "2023-07-15T11:20:16.442Z",
+      "id": 4
+    }
+  ]
+}
